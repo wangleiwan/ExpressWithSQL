@@ -1,0 +1,9 @@
+if records
+  table(border=1)
+    tr
+      td Customer ID
+      td Customer Name
+    each record in records
+      tr
+        td #{record.customerId}
+        td #{record.customerName}
