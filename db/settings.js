@@ -1,7 +1,7 @@
 exports.config = {
   user: "sa",
-  password: "Wl54706008",
-  server: "localhost\\LEIWANG",
+  password: "*********",
+  server: "localhost\\*******",
   database: "Testing",
   port: 1433
 }
