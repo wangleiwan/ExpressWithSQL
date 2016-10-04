@@ -18,7 +18,7 @@ exports.GetCustomerByID = function(id, callback) {
     new sql.Request()
     .input('param', sql.NVarChar, id)
     .query('select * from Customer where customerId = @param').then(function(recordset){
-      console.dir(recordset);
+      //console.dir(recordset);
       callback(recordset);
     }).catch(function(err){
       console.error('Error', err);

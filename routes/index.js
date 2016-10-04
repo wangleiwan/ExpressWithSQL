@@ -18,19 +18,22 @@ router.get('/', function(req, res, next) {
 
 router.get('/customers', function(req, res, next) {
   var id = req.query.q;
+  console.log(id);
   if(id) {
     Data.GetCustomerByID(id, function(recordset) {
-      res.render('index', {
-        records: recordset,
-        title: "Welcome to Express SQL"
-      });
+      res.send({records: recordset})
+      // res.render('index', {
+      //   records: recordset,
+      //   title: "Welcome to Express SQL"
+      // });
     });
   } else {
     Data.GetCustomers(function(recordset){
-      res.render('index', {
-        records: recordset,
-        title: "Welcome to Express SQL"
-      });
+      res.send({records: recordset});
+      // res.render('index', {
+      //   records: recordset,
+      //   title: "Welcome to Express SQL"
+      // });
     });
   }
 });

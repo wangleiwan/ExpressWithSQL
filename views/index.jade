@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  include customers
+  h1 Welcome to Express SQL
+  input(
+    type='text',
+    class='searchBar'
+    placeholder='type in customer id to search'
+    )
+  button#search Search
+  button.getAll Get All Customers
+  .display
